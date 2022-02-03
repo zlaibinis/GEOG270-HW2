@@ -10,19 +10,19 @@
     <h1>Using QGIS to explore the different world projections</h1>
     
     <h2>How I displayed different map projections using QGIS:</h2>> 
-    <p>summary</p>
+    <p>I began by opening the natural earth shapefile which contained all continents on the planet. It was also important to have the plug-in Indicatrix Mapper downloaded. With everything ready I could then change the Coordinate Reference Systems to whichever projection I had to evaluate. Once the projection was selected I could run Indicatrix Mapper on the shapefile in the projection to see where distortion is the greatest based on size and shape of the Tissot Circles. I could then change the current CRS into a new projection and the Indicatrix Mapper would change based on the projection being used. </p>
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
+    <h3>In my initial observations I noticed that this projection is similar to the Mercator projection, which would make it a cylindrical projection. As one moves towards the poles, the Tissot circles elongate into ellipses. The elongation means that areas of land increase in distortion with decreasing distance from the poles. This is clearly evident in the size of Antarctica and elongation in other continents that run East to West. However, shape is preserved, as each land mass maintains proper boarders. Since shape is preserved, the map would also be conformal.</h3>
     <a href="./Images/4326.png">
     <img src="./Images/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>This is an equatorial azimuthal projection since there is one point of minimal distortion at the center of the map on the equator. Unlike WGS84, the graticules are curved towards the poles, with distortion increasing towards the poles or farthest points East and West. Every feature is distorted in this map. Since the ellipses are elongated in the North and South direction, there is greater distortion in the area of land North to South instead of East to West, like in the WGS84 projection. A benefit is that azimuthal projections tend to preserve direction best.</h3>
     <a href="./Images/54043.png">
     <img src="./Images/54043.png" alt="Aitoff" width='500px'>
     </a>
     <h2>Pseudo-Mercator Projection</h2>
-    <h3>Some observations</h3>
+    <h3>Similar to the WGS84 projection, the Pseudo-Mercator projection is a cylindrical projection. With decreasing distance to the poles, area of the land masses increases, which is presented in the Tissot circles increasing in size near the poles. This is seen in how Greenland seems to be the same size as Africa. Since the projection distorts area, shape is preserved, as each continent maintains the expected shape. For this Mercator projection, there is a small amount of change in the distortion for the Tissot circles within one graticule of the equator. A benefit to Mercators is that direction is also preserved, which is why the projections are used for navigation.</h3>
     <a href="./Images/3857.png">
     <img src="./Images/3857.png" alt="Pseudo-Mercator" width='500px'>
     </a>
